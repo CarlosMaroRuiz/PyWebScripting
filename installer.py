@@ -18,7 +18,6 @@ def show_banner():
     """ + Fore.YELLOW + """
     WebPy: Project Creator for Web Development using layered style
     """ + Fore.WHITE + """
-    Created by: YourName
     Version: 1.0
     Codename: WebPy
     Follow me on GitHub: @CarlosMaroRuiz
