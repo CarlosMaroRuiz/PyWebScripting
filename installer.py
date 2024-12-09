@@ -3,6 +3,7 @@ from colorama import Fore, Style, init
 import os
 
 from executers.rest_fast.execute import install_rest_fast
+from executers.web.execute import install_web_flask
 from utils.create_virtualenv import create_virtualenv
 
 init(autoreset=True)
@@ -16,10 +17,10 @@ def show_banner():
       \_/\_/ \___|_.__/|_|    \__, |
                               |___/ 
     """ + Fore.YELLOW + """
-    WebPy: Project Creator for Web Development using layered style
+    pyWeb: Project Creator for Web Development using layered style
     """ + Fore.WHITE + """
     Version: 1.0
-    Codename: WebPy
+    Codename: pyWeb
     Follow me on GitHub: @CarlosMaroRuiz
     """)
 
@@ -65,13 +66,13 @@ def main():
 
     if choice == "CREATE WEB PROJECT WITH FLASK, JINJA, TAILWIND and MySql":
         print(Fore.GREEN + f"Creating a web project with Flask, Jinja, and Tailwind in '{project_folder}'...")
-        create_virtualenv(project_folder)
+        install_web_flask(project_folder)
     elif choice == "CREATE API REST WITH FASTAPI and MySql":
         print(Fore.GREEN + f"Creating an API REST with FastAPI in '{project_folder}'...")
         install_rest_fast(project_folder)
     elif choice == "CREATE API REST WITH FLASK-RESTFUL and MySql":
-        print(Fore.GREEN + f"Creating an API REST with Flask-RESTful in '{project_folder}'...")
-        create_virtualenv(project_folder)
+        print(Fore.YELLOW + "This feature is currently under development.")
+        print(Fore.GREEN + f"Preparing the structure for Flask-RESTful in '{project_folder}'...")
 
 if __name__ == "__main__":
     try:
